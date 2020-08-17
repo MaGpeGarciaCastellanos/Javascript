@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        .caja{
+
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            background: #226fc1;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 30px;
+            color:#fff;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <!--<button onclick="Saludo()">Saludo</button>-->
+    <!--<button id="btn-saludar">Saludar</button>-->
+    <button id="btn-caja">Crear caja</button>
+    <section id="contenedor"></section>
+    <script>
+        function crearCaja() {
+            var contenedor=document.getElementById("contenedor");
+            var caja = document.createElement('div');
+            caja.className='caja';
+            contenedor.appendChild(caja);
+
+        }
+        var btnCaja=document.getElementById('btn-caja');
+        btnCaja.addEventListener('click',crearCaja);
+
+        /*Existen 3 modelos de eventos diferentes:
+        -Modelo basico de eventos.
+        Caracteristicas limitadas.
+        Pero funciona en todos los naavegadores
+
+        -Modelo de eventos estandar
+        Podemos hacer mas cosas con el 
+        Todos los navegadores lo sosportan 
+
+        Las versiones anteriores de Internet explore como IE7 no lo soportan 
+        -Modelo de eventos de Internet Explorer.
+        Modelo creado por Microsoft exclusivamente para IE.
+*/
+
+      /* function Saludo() {
+           alert('Hola');
+       }
+       function Saludo2() {
+           alert('Hola 2');
+       }
+
+       var btnsaludar=document.getElementById('btn-saludar');
+       btnsaludar.addEventListener('click',Saludo);
+       btnsaludar.addEventListener('click',Saludo2);*/
+    </script>
+</body>
+</html>
